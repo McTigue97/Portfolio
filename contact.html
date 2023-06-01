@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>James McTigue</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Free HTML5 Template plus Photoshop design">
+  <meta name="keywords" content="free html template, portfolio, html5, sass, jquery">
+  <meta name="author" content="James McTigue">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<form action="assets/php/contact.php" method="post" class="contact-form">
+  <!-- Form fields go here -->
+</form>
+  <title>Contact Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #0004ff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+	<!-- END SECTION: Splashscreen -->
+	<!-- SECTION: Navigation -->
+	<div id="top" class="navigation">
+		<div class="navigation__wrapper wrapper--large">
+			<img src="assets/img/jmct2.jpg" class="navigation__logo logo" height="100%">
+			<nav class="navigation__container">
+				<ul class="navigation__list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="work.html">Portfolio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<a class="navigation__cta button" href="contact.html">Get In Touch</a>
+			<div class="navigation__burger">
+				<span class="navigation__burger-el navigation__burger-el--top"></span>
+				<span class="navigation__burger-el navigation__burger-el--middle"></span>
+				<span class="navigation__burger-el navigation__burger-el--bottom"></span>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <div class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="Your name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" placeholder="Your email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" placeholder="Your message" required></textarea>
+
+      <button onclick="sendEmail()">Send Email</button>
+    </div>
+  </div>
+  <script>
+    function sendEmail() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      // You can replace the following code with your own email handling logic
+      var subject = "Portfolio Contact";
+      var body = "Name: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message;
+
+      // Open the default email client with the email populated
+      window.location.href = "mailto:james.mctigue327@gmal.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    }
+  </script>
+</body>
+</html>
